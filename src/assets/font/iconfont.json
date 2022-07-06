@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1046066",
+      "name": "双列列表",
+      "font_class": "shuanglieliebiao",
+      "unicode": "e6e5",
+      "unicode_decimal": 59109
+    },
+    {
+      "icon_id": "6804058",
+      "name": "信息消息系列",
+      "font_class": "Chat-Error",
+      "unicode": "e84f",
+      "unicode_decimal": 59471
+    },
+    {
+      "icon_id": "17228448",
+      "name": "查询",
+      "font_class": "chaxun",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    }
+  ]
+}

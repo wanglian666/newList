@@ -1,27 +1,37 @@
+// 引入vue  vue-router和vue深度集成
 import Vue from 'vue'
+// 引入路由
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
+
+// 在vue中，使用vue的插件都需要调用Vue.use()
 Vue.use(VueRouter)
 
+// 创建路由规则，一一对应关系
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/',   // 路由地址`
+    component:()=>import('@/views/Home.vue'), // 按需加载
+    
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path:'/index',
+    component:()=>import('@/views/index.vue')
   }
+  
 ]
 
+// 创建路由对象 router
 const router = new VueRouter({
-  routes
+  // 路由规则 
+  routes,
+  mode:'history'
 })
 
+// 全局路由守卫
+router.beforeEach((to,from,next) => {
+  next();
+})
+
+// 暴露路由对象
 export default router
